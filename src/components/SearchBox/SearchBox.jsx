@@ -3,7 +3,7 @@ import {useId} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterValue, setFilterValue } from '../../redux/filtersSlice';
 const SearchBox = () => {
-  const searchInput = useId();
+  const searchInputId = useId();
   const dispatch = useDispatch();
   const filterName = useSelector(filterValue);
   const handleFilter = (value) => {
@@ -12,7 +12,7 @@ const SearchBox = () => {
   return (
   
     <input className={css.search}
-      id={searchInput} type="text" value={filterName} onChange={handleFilter} placeholder="Search contacts" />
+      id={searchInputId} type="text" value={filterName} onChange={(e) => handleFilter(e.target.value) } placeholder="Search contacts" />
   );
 };
 

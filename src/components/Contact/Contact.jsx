@@ -3,11 +3,11 @@ import { ImPhone, ImUser  } from "react-icons/im";
 
 
 
-const Contact = ({ id, name, number, onDeleteContact }) => (
+const Contact = ({ id, name, number, deleteContacts }) => (
   <li className={css.contact}>
     <p> < ImUser size="16"/> {name}</p>
     <p> < ImPhone size="16"/> {number}</p>
-    <button className={css.deleteBtn} onClick={() => onDeleteContact(id)}>Delete</button>
+    <button className={css.deleteBtn} onClick={() => deleteContacts(id)}>Delete</button>
   </li>
 );
 

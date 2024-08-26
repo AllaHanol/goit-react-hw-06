@@ -25,7 +25,7 @@ export const store = configureStore({
       contactsConfig,
       contactsReducer,
     ),
-    filter: filtersReducer,
+    filters: filtersReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
