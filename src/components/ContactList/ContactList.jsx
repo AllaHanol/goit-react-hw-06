@@ -24,7 +24,7 @@ const ContactList = () => {
             key={id}
             id={id}
             name={name}
-            phone={number}
+            number={number}
             deleteContacts={(contactId) => {
             dispatch(deleteContact(contactId));
             }}
